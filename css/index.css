@@ -1,0 +1,180 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'rijks-bold';
+    src: url('./fonts/rijksoverheidfonts-master/rijksoverheidsansheading-bold.ttf');
+}
+
+@font-face {
+    font-family: 'rijks';
+    src: url('./fonts/rijksoverheidfonts-master/rijksoverheidsanstext-regular.ttf');
+}
+
+@font-face {
+    font-family: 'rijks-italic';
+    src: url('./fonts/rijksoverheidfonts-master/rijksoverheidserif-italic.ttf');
+}
+
+body {
+    position: relative;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'rijks', sans-serif;
+}
+
+p, a, button, input, input::placeholder, label {
+    font-family: 'rijks';
+}   
+
+header {
+    width: 100%;
+    background-color: #01689b;
+    color: #fff;
+    padding: 20px;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+header h1 {
+    font-size: 28px;
+}
+
+@media (max-width: 320px) {
+    header h1 {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 321px) and (max-width: 450px) {
+    header {
+        text-align: center;
+    }
+    header h1 {
+        font-size: 25px;
+    }
+}
+
+main {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+}
+
+.form-container {
+    width: 100%;
+    height: 350px;
+    max-width: 600px;
+    background-color: #d9e8f0;
+    padding: 20px;
+}
+
+.form-container h2 {
+    padding-bottom: 10px;
+}
+
+.result-container {
+    width: 100%;
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.result-content-container {
+    width: calc(100% - 40px);
+    max-width: 600px;
+    height: 150px;
+    background-color: #d9e8f0;
+    padding: 20px;
+}
+
+@media (max-width: 320px) {
+    .form-container h2 {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 500px) {
+    .form-container h2 {
+        font-size: 22px;
+    }
+}
+
+.form-container form {
+    width: 100%;
+    height: 200px;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.input-container {
+    position: relative;
+}
+
+.input-container input {
+    width: 70%;
+    height: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px solid #000;
+}
+
+#submit-dept-form {
+    margin-top: 20px;
+    cursor: pointer;
+    width: 180px;
+    height: 40px;
+    max-width: 100%;
+    color: #fff;
+    background-color: #01689b;
+    border: none;
+    box-shadow: #01689b;
+    border: none;
+    border-radius: 5px;
+    transition: .5s;
+}
+
+#submit-dept-form:hover {
+    transform: scale(.95);
+    border-radius: 10px;
+}
+
+.error-message {
+    color: red;
+    margin-bottom: 30px;
+}
+
+.result-amount {
+    color: #01689b;
+    font-size: 35px;
+}
+
+.none {
+    display: none;
+}
+
+#refresh {
+    margin-top: 10px;
+    padding: 5px 10px;
+    color: #fff;
+    background-color: #01689b;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

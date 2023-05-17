@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="javascript/index.js" defer></script>
+    <title>DUO Calculator</title>
+</head>
+<body>
+    <header>
+        <h1>
+            Rijks DUO Calculator
+        </h1>
+    </header>
+    <main>
+        <section class="form-container">
+            <h2>Berkenen mijn maandelijkse Studieschuld</h2>
+            <form id="dept-form" action="">
+                <div class="input-container">
+                    <label id="dept-label" for="number">Jouw studieschuld</label>
+                    <input name="number" type="number" id="dept-input">
+                </div>
+                <div class="input-container">
+                    <label for="time">Mijn gewenste aflostijd (max 30 jaar)</label>
+                    <input type="number" id="years-input" max="30">
+                </div>
+                <button type="submit" id="submit-dept-form">
+                    Bereken maand bedrag
+                </button>
+            </form>
+            <p class="error-message"></p>
+        </section>
+        <section class="result-container none">
+            <div class="result-content-container">
+                <h3>Jouw maandelijkse bedrag:</h3>
+                <p class="result-amount">
+                  
+                </p>
+                <button id="refresh">Refresh</button>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
